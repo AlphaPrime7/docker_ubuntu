@@ -1,0 +1,76 @@
+---
+title: "Docker"
+output: html_notebook
+---
+
+## alternate install syntax
+
+```{bash}
+sudo apt install \
+apt-transport-https \
+ca-certificates \
+curl \
+software-properties-common
+```
+
+## pre-reqs
+
+```{bash}
+sudo apt install \
+apt-transport-https \
+ca-certificates \
+curl \
+software-properties-common
+```
+
+
+## curl 
+
+```{bash}
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add
+#apt-key is deprecated and ensures that Docker can access trusted key values from a dictionary
+```
+
+## add docker repo
+
+```{bash}
+sudo add-apt-repository \
+"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \
+stable"
+sudo apt update #keep things updated
+#keyring issues here but just ignored, out of scope.
+```
+
+## install docker
+
+```{bash}
+sudo apt install docker-ce #430MB
+```
+
+## init docker
+
+```{bash}
+sudo service docker start
+```
+
+## hello world
+
+```{bash}
+sudo docker run hello-world
+```
+
+## clone RL repo
+
+```{bash}
+git clone https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
+```
+
+## access clone
+
+```{bash}
+cd Reinforcement-learning-with-tensorflow
+dir #list directories
+cd contents #core of the tutorial
+```
+
